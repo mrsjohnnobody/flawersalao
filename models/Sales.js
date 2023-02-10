@@ -34,4 +34,10 @@ const Sales = db.define("Sales", {
   },
 });
 
+Product.hasMany(Sales, {
+  foreignKey: 'ProductId'
+})
+
+Sales.belongsTo(Product, {foreignKey : 'ProductId'})
+
 module.exports = Sales;

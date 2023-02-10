@@ -65,6 +65,7 @@ module.exports = class SalesController {
         price: req.body.price,
         commission: req.body.commission,
         soldQuantity: req.body.soldQuantity,
+        ProductId: product.id
       };
 
       await Sales.create(sale);
@@ -123,12 +124,13 @@ module.exports = class SalesController {
   }
 
   static async deleteSale(req, res) {
-    const { id } = req.params;
+    const id = req.params.id;
     const sale = await Sales.findByPk(id);
 
     const product = await Product.findOne({
-      where: { id: sale.id },
+      where: { id: sale.ProductId },
     });
+    
     await product.update({
       quantity: product.quantity + sale.soldQuantity,
     });
