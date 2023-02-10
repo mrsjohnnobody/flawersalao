@@ -1,0 +1,19 @@
+<h1>Editar Produto: {{product.id}}</h1>
+<div class="container">
+  <form action="/products/edit" method="POST" class="form-control">
+    <input type="hidden" name="id" value="{{product.id}}" />
+    <div>
+      <label for="name">Produto:</label>
+      <input type="text" name="name" value={{product.name}} />
+    </div>
+    <div>
+      <label for="price">Preço:</label>
+      <input type="number" name="price" value={{product.price}} />
+    </div>
+    <div>
+      <label for="quantity">Quantidade:</label>
+      <input type="number" name="quantity" value={{product.quantity}} />
+    </div>
+    <button type="submit">Editar product</button>
+  </form>
+</div>

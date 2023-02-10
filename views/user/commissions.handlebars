@@ -1,0 +1,30 @@
+<h1>Comissões</h1>
+
+<div class="container mt-3">
+  <ul class="list-group border border-1">
+    <li class="list-group-item d-flex bg-success fw-bold">
+      <div class="col-1">Data</div>
+      <div class="col-2">Cliente</div>
+      <div class="col-2">Descrição</div>
+      <div class="col-1">Valor</div>
+      <div class="col-2">Colaborador</div>
+      <div class="col-1">%</div>
+      <div class="col-2">Pagamento</div>
+      <div class="col-1">Comissão (R$)</div>
+    </li>
+    {{#each services}}
+      <li class="list-group-item d-flex align-items-center">
+        <div class="col-1">{{date}}</div>
+        <div class="col-2">{{clientName}}</div>
+        <div class="col-2">{{description}}</div>
+        <div class="col-1">{{price}}</div>
+        <div class="col-2">{{colaborator}}</div>
+        <div class="col-1">{{commission}}</div>
+        <div class="col-2">{{paymentMethod}}</div>
+        <div class="col-1">{{totalCommission}}</div>        
+      </li>
+    {{/each}}
+
+  </ul>
+
+</div>

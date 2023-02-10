@@ -1,0 +1,72 @@
+<h1>Edição Serviço: {{service.id}}</h1>
+<form action="/edit" method="POST">
+  <input type="hidden" name="id" value="{{service.id}}" />
+  <div>
+    <label for="date">Name:</label>
+    <input type="date" name="date" value={{service.date}} />
+  </div>
+  <div>
+    <label for="clientName">Cliente:</label>
+    <input
+      type="text"
+      name="clientName"
+      placeholder="Digite o nome da cliente"
+      value={{service.clientName}}
+    />
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <input
+      type="text"
+      name="description"
+      placeholder="Digite o serviço realizado"
+      value={{service.description}}
+    />
+  </div>
+  <div>
+    <label for="typeOf">Tipo:</label>
+    <input
+      type="text"
+      name="typeOf"
+      placeholder="Digite o tipo (receita/despesa)"
+      value={{service.typeOf}}
+    />
+  </div>
+  <div>
+    <label for="price">Valor:</label>
+    <input
+      type="number"
+      name="price"
+      placeholder="Digite o valor"
+      value={{service.price}}
+    />
+  </div>
+  <div>
+    <label for="colaborator">Colaborador:</label>
+    <input
+      type="text"
+      name="colaborator"
+      placeholder="Digite quem realizou o serviço"
+      value={{service.colaborator}}
+    />
+  </div>
+  <div>
+    <label for="commission">Comissão:</label>
+    <input
+      type="number"
+      name="commission"
+      placeholder="Digite a comissão"
+      value={{service.commission}}
+    />
+  </div>
+  <div>
+    <label for="description">Forma de pagamento:</label>
+    <input
+      type="text"
+      name="paymentMethod"
+      placeholder="Digite a forma de pagamento"
+      value={{service.paymentMethod}}
+    />
+  </div>
+  <input type="submit" value="Edit service" />
+</form>

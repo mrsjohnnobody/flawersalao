@@ -1,0 +1,41 @@
+<h1>Testando se deu certo a primeira rota</h1>
+
+<div class="container mt-3">
+  <ul class="list-group border border-1">
+    <li class="list-group-item d-flex bg-success fw-bold">
+      <div class="col-1">Data</div>
+      <div class="col-2">Cliente</div>
+      <div class="col-2">Descrição</div>
+      <div class="col-2">Tipo</div>
+      <div class="col-2">Valor</div>
+      <div class="col-2">Pagamento</div>
+      <div class="col-1">Ação</div>
+    </li>
+    {{#each users}}
+      <li class="list-group-item d-flex align-items-center">
+        <div class="col-1">{{date}}</div>
+        <div class="col-2">{{clientName}}</div>
+        <div class="col-2">{{description}}</div>
+        <div class="col-2">{{typeOf}}</div>
+        <div class="col-2">{{price}}</div>
+        <div class="col-2">{{paymentMethod}}</div>
+        <div class="col-1">
+          <div class="actions">
+            <a href="/edit/{{this.id}}"><button type="submit">
+                <i class="bi bi-pencil-square" style="font-size: 1rem"></i>
+              </button></a>
+
+            <form action="/remove" method="POST">
+              <input type="hidden" name="id" value="{{this.id}}" />
+              <button type="submit">
+                <i class="bi bi-trash" style="font-size: 1rem"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </li>
+    {{/each}}
+
+  </ul>
+
+</div>

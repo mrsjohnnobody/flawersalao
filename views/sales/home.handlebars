@@ -1,0 +1,52 @@
+<h1>Venda produto</h1>
+<div class="container">
+  <form action="/products/sale" method="POST" class="form-control">
+    <input type="hidden" name="id" value="{{product.id}}" />
+    <div>
+      <label for="name">Produto:</label>
+      <input type="text" name="name" value="{{product.name}}" readonly />
+    </div>
+    <div>
+      <label for="date">Data de venda:</label>
+      <input type="date" name="date" />
+    </div>
+    <div>
+      <label for="colaborator">Vendedor:</label>
+      <select name="colaborator" class="form-control">
+        <option selected>Selecione um colaborador</option>
+        <option value="Alessandra">Alessandra</option>
+        <option value="Erika">Erika</option>
+        <option value="Eduarda">Eduarda</option>
+        <option value="Kassia">Kassia</option>
+      </select>
+    </div>
+    <div>
+      <label for="paymentMethod">Forma de pagamento:</label>
+      <select name="paymentMethod" class="form-control">
+        <option selected>Selecione a forma de pagamento</option>
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Pix">Pix</option>
+        <option value="Dinheiro/Pix">Dinheiro/Pix</option>
+        <option value="Cartão crédito">Cartão crédito</option>
+        <option value="Cartão débito">Cartão débito</option>
+        <option value="Cartão/Pix">Cartão/Pix</option>
+        <option value="Cartão/Dinheiro">Cartão/Dinheiro</option>
+        <option value="Boleto">Boleto</option>
+        <option value="Dinheiro/Pix/Cartão">Dinheiro/Pix/Cartão</option>
+      </select>
+    </div>
+    <div>
+      <label for="price">Valor:</label>
+      <input type="text" name="price" />
+    </div>
+    <div>
+      <label for="commission">Comissão:</label>
+      <input type="text" name="commission" value="3" readonly />
+    </div>
+    <div>
+      <label for="soldQuantity">Quantidade venda:</label>
+      <input type="number" name="soldQuantity" placeholder="Digite a quantidade vendida" />
+    </div>
+    <button type="submit">Create sale</button>
+  </form>
+</div>

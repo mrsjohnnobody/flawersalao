@@ -1,0 +1,19 @@
+<h1>Adicionar Produto</h1>
+<div class="container">
+  <form action="/products/create" method="post" class="form-control">
+    <input type="hidden" name="createServiceSave" value="POST" />
+    <div>
+      <label for="name">Produto:</label>
+      <input type="text" name="name" placeholder="Digite o nome do produto" />
+    </div>
+    <div>
+      <label for="price">Preço:</label>
+      <input type="number" name="price" placeholder="Digite o preço do produto" />
+    </div>
+    <div>
+      <label for="quantity">Quantidade:</label>
+      <input type="number" name="quantity" placeholder="Digite a quantidade do produto em estoque" />
+    </div>
+    <button type="submit">Create product</button>
+  </form>
+</div>

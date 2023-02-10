@@ -1,0 +1,58 @@
+<h1>Adicionar Serviço</h1>
+<div class="container">
+  <form action="/add" method="post" class="form-control">
+    <input type="hidden" name="createServiceSave" value="POST" />
+    <div>
+      <label for="date">Name:</label>
+      <input type="date" name="date" />
+    </div>
+    <div>
+      <label for="clientName">Cliente:</label>
+      <input
+        type="text"
+        name="clientName"
+        placeholder="Digite o nome da cliente"
+      />
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input
+        type="text"
+        name="description"
+        placeholder="Digite o serviço realizado"
+      />
+    </div>
+    <div>
+      <label for="typeOf">Tipo:</label>
+      <input
+        type="text"
+        name="typeOf"
+        placeholder="Digite o tipo (receita/despesa)"
+      />
+    </div>
+    <div>
+      <label for="price">Valor:</label>
+      <input type="number" name="price" placeholder="Digite o valor" />
+    </div>
+    <div>
+      <label for="colaborator">Colaborador:</label>
+      <input
+        type="text"
+        name="colaborator"
+        placeholder="Digite quem realizou o serviço"
+      />
+    </div>
+    <div>
+      <label for="commission">Comissão:</label>
+      <input type="number" name="commission" placeholder="Digite a comissão" />
+    </div>
+    <div>
+      <label for="description">Forma de pagamento:</label>
+      <input
+        type="text"
+        name="paymentMethod"
+        placeholder="Digite a forma de pagamento"
+      />
+    </div>
+    <button type="submit">Create service</button>
+  </form></div>

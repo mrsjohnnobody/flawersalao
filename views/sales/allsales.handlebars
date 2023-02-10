@@ -1,0 +1,41 @@
+<h1>Vendas</h1>
+<div class="container mt-3">
+  <ul class="list-group border border-1">
+    <li class="list-group-item d-flex bg-success fw-bold">
+      <div class="col-1">Produto</div>
+      <div class="col-1">Data venda</div>
+      <div class="col-2">Vendedor</div>
+      <div class="col-2">Forma de Pag</div>
+      <div class="col-1">Valor</div>
+      <div class="col-1">Comissão</div>
+      <div class="col-1">Qtd vendida</div>
+      <div class="col-2">Venda total</div>
+      <div class="col-1">Ações</div>
+    </li>
+    {{#each sales}}
+    <li class="list-group-item d-flex align-items-center">
+      <div class="col-1">{{name}}</div>
+      <div class="col-1">{{date}}</div>
+      <div class="col-2">{{colaborator}}</div>
+      <div class="col-2">{{paymentMethod}}</div>
+      <div class="col-1">{{price}}</div>
+      <div class="col-1">{{commission}}</div>
+      <div class="col-1">{{soldQuantity}}</div>
+      <div class="col-2">R$ {{totalSales }}</div>
+      <div class="col-1">
+        <div class="actions">
+          <a href="/sales/{{this.id}}/edit"><button type="submit">
+              <i class="bi bi-pencil-square" style="font-size: 1rem"></i>
+            </button></a>
+          <form action="/sales/{{this.id}}/delete" method="POST">
+            <input type="hidden" name="id" value="{{this.id}}" />
+            <button type="submit">
+              <i class="bi bi-trash" style="font-size: 1rem"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+</div>
